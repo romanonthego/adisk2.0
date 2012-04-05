@@ -4,8 +4,8 @@
   %div.row
     = f.column do
       = f.fieldset "Основная информация" do
-        = f.prepended_input_for :email, :text, :placeholder => "email", :icon => "envelope", :hint => "hello"
-        = f.prepended_input_for :password, :password, :placeholder => "password", :icon => "user"
-        = f.prepended_input_for :password_confirmation, :password, :placeholder => "password confirmation", :icon => "user"
+        = f.prepended_for :email, :text, :placeholder => "email", :icon => "envelope", :hint => "hello"
+        = f.prepended_for :password, :password, :placeholder => "password", :icon => "user"
+        = f.prepended_for :password_confirmation, :password, :placeholder => "password confirmation", :icon => "user"
   %div.row
     = f.form_actions

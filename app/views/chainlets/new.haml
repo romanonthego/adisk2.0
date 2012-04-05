@@ -7,16 +7,28 @@
   %div.row
     =f.column do
       =f.fieldset "Процесс" do
-        =f.text_field :title
-        =f.text_field :description
+        =f.prepended_for :title, :text, :icon => "font"
+        =f.prepended_for :description, :text, :placeholder => "Описание", :icon => "tag"
     =f.column do
       =f.fieldset "Комментарий" do
-        = f.prepended_input_for :comment, :text, :placeholder => "password", :icon => "user"
-  =f.fields_for :chainlet_links do |b|
-    %div.row
-      =b.column 8 do
-        =b.text_field :ordinal_number
-        =b.text_field :link_type
-        =b.text_field :link_value
+        = f.prepended_for :comment, :textarea, :placeholder => "Комментарий", :icon => "edit", :rows => 4
+
+  =f.sortable_list_for_nested :chainlet_links, :id => "chainlet-links" do |b|
+    =b.sortable_list_element 8 do
+      %div.meta
+        %i.icon-move.icon-large.handler
+        %p #1
+      %div.btn-group(data-toggle="buttons-radio" style="display:inline-block")
+        %div.btn 
+          %i.icon-user
+          Пользователь
+        %div.btn
+          %i.icon-cog
+          Роль
+        %div.btn
+          %i.icon-home
+          Отдел
+      %div.pull-right
+        =b.prepended_for :link_value,  :text, :icon => "info-sign", :span => 4
   %div.row
     = f.form_actions

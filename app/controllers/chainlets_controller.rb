@@ -28,7 +28,7 @@ class ChainletsController < ApplicationController
   # GET /chainlets/new.json
   def new
     @chainlet = Chainlet.new
-    3.times do
+    3.times do |t|
       @chainlet.chainlet_links.build
     end
 
