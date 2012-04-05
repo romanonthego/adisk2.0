@@ -1,0 +1,29 @@
+%div{:class => "content-header clearfix"}
+  %div{:class => "row"}
+    %div{:class => "span8"}
+      %h3 Новая служебная записка
+%div.row
+  %div.span8
+    %form.document-form.form-horizontal
+      %div.row
+        %div.span4
+          %fieldset
+            %legend Реквизиты
+            /%label Тема
+            %input{:type => "text", :class => "span4", :placeholder => "Тема"}
+            /%label Причина
+            %input{:type => "text", :class => "span4", :placeholder => "Причина"}
+        %div.span4
+          %fieldset
+            %legend Реквизиты
+            %div.input-custom
+              %input{:type => "text", :class => "span4", :placeholder => "Тема"}
+              %span.add-on
+                %i.icon-user
+            %input{:type => "text", :class => "span4", :placeholder => "Причина"}
+      %div.row
+        %div.span8
+          %button{:type =>"submit", :class => "btn btn-primary"} Save changes
+          %button.btn Cancel
+  %div.span2
+    %h3 Статус

@@ -1,0 +1,8 @@
+%div{:class => "content-header clearfix"}
+  %div{:class => "row"}
+    %div{:class => "span10"}
+      %h3 Новый пользователь
+
+%div.row
+  %div.span8
+    = render :partial => 'form', :locals => {:user => @user}

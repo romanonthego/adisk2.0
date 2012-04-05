@@ -1,0 +1,22 @@
+%div{:class => "content-header clearfix"}
+  %div{:class => "row"}
+    %div{:class => "span10"}
+      %h3 Процесс
+
+=form_for @chainlet, :validate => true, :builder => AdiskFormBuilder, :html => {:class => "document-form form-horizontal"} do |f|
+  %div.row
+    =f.column do
+      =f.fieldset "Процесс" do
+        =f.text_field :title
+        =f.text_field :description
+    =f.column do
+      =f.fieldset "Комментарий" do
+        = f.prepended_input_for :comment, :text, :placeholder => "password", :icon => "user"
+  =f.fields_for :chainlet_links do |b|
+    %div.row
+      =b.column 8 do
+        =b.text_field :ordinal_number
+        =b.text_field :link_type
+        =b.text_field :link_value
+  %div.row
+    = f.form_actions

@@ -1,0 +1,268 @@
+
+body { 
+	padding-top: 40px;
+	background-image: image-url('bg.png');
+	}
+
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 960px;
+}
+
+.nav-list {
+	padding-left:0px;
+	//font-size: 1.1em;
+	
+	.nav-header {
+		font-size:1em;
+		font-weight: normal;
+		color:#4d4d4d;
+		box-shadow: 0px 1px 0px rgba(99, 99, 99, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.5);
+		padding-left:0px; // makes appers outside of conteiner. nothing to scare about but still
+	}
+
+	li{
+
+		a {
+			padding-left:0px;
+			//line-height:30px;
+			
+			//color:#6d6d6d;
+
+			&:hover {
+				//color:#4d4d4d;
+				background: none;
+			}
+		}
+	}
+}
+
+.sidebar-nav {
+	padding-top: 20px;
+	box-shadow: 1px 0px 0px rgba(99, 99, 99, 0.3), 2px 0px 0px rgba(255, 255, 255, 0.5);
+
+	.nav {
+		margin-bottom:10px;
+	}
+}
+
+.navbar-inner {
+	background-image: image-url('nav-bg.png');
+}
+
+h3 {
+	font-weight: normal;
+}
+
+.table {
+	border-collapse: separate;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+
+	th, td {
+		border:none;
+		border-bottom: 1px solid rgba(99, 99, 99, 0.3);
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+	}
+
+	tr:last-child td {
+		box-shadow:none;
+	}
+}
+
+.search {
+	//padding: 15px;
+	box-shadow: -1px 0px 0px rgba(99, 99, 99, 0.3), -2px 0px 0px rgba(255, 255, 255, 0.5);
+
+	h3, input {
+		margin-left:15px;
+	}
+}
+
+.content-header {
+	padding-top: 20px;
+
+	h1, h2, h3, h4, h5 ,h6 {
+		float: left;
+	}
+
+	.breadcrumb {
+		padding-left:0px;
+		margin:0px;
+		background:none;
+		border:none;
+		box-shadow:none;
+	}
+
+	.form-inline {
+
+		input[type='submit'] {
+			float:right;	
+		}
+
+		a {
+			display: inline-block;
+		}
+	}
+}
+
+.pagination {
+	ul {
+		border:none;
+		box-shadow:none;
+	}
+
+	li{
+		 a {
+			border-radius:0px;
+			border:none;
+			box-shadow: 1px 0px 0px rgba(99, 99, 99, 0.3), 2px 0px 0px rgba(255, 255, 255, 0.5);
+
+			
+		}
+	}
+}
+
+
+.document-form {
+
+	fieldset{
+		padding-top:5px;	
+	}
+
+	.row:first-child {
+		box-shadow: 0px 1px 0px rgba(99, 99, 99, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.5);
+	}
+
+	legend {
+		display: block;
+		font-size: 1em;
+		line-height:2em;
+		margin-bottom:10px;
+		border: none;
+		box-shadow: 0px 1px 0px rgba(99, 99, 99, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.5);
+	}
+
+	.actions {
+		margin-top:15px;
+	}
+
+	.input-custom {
+		display:block;
+		position: relative;
+		margin-bottom:7px;
+
+		input, select {
+			padding-left:24px;
+			border-radius:0px;
+
+			&:focus {
+				box-shadow:none;
+				background-color: #F3F9FC;
+			}
+		}
+
+		span.add-on {
+    position:absolute;
+    left:8px;
+    bottom:4px;
+    color:#999;
+		}
+
+		// error handling
+		&.error {
+			input {
+				border: 1px solid @errorText;
+				background-color: #FCF3F3;
+
+				/*&:focus {
+					background-color: @errorBackground;
+				}*/
+			}
+
+			span.add-on {
+				color: @errorText;
+			}
+		}
+	}
+
+	input.span12, textarea.span12, .uneditable-input.span12 {
+	  width: 910px;
+	}
+	input.span11, textarea.span11, .uneditable-input.span11 {
+	  width: 830px;
+	}
+	input.span10, textarea.span10, .uneditable-input.span10 {
+	  width: 750px;
+	}
+	input.span9, textarea.span9, .uneditable-input.span9 {
+	  width: 670px;
+	}
+	input.span8, textarea.span8, .uneditable-input.span8 {
+	  width: 590px;
+	}
+	input.span7, textarea.span7, .uneditable-input.span7 {
+	  width: 510px;
+	}
+	input.span6, textarea.span6, .uneditable-input.span6 {
+	  width: 430px;
+	}
+	input.span5, textarea.span5, .uneditable-input.span5 {
+	  width: 350px;
+	}
+	input.span4, textarea.span4, .uneditable-input.span4 {
+	  width: 270px;
+	}
+	input.span3, textarea.span3, .uneditable-input.span3 {
+	  width: 190px;
+	}
+	input.span2, textarea.span2, .uneditable-input.span2 {
+	  width: 110px;
+	}
+	input.span1, textarea.span1, .uneditable-input.span1 {
+	  width: 30px;
+	}
+}
+
+.user {
+	box-shadow: 0px 1px 0px rgba(99, 99, 99, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.5);
+}
+
+a.act {
+	
+	display: block;
+	padding: 5px 10px;
+	background-color: @linkColor;
+	border-radius:3px;
+	box-shadow: 0px 2px 0px @linkColorHover;
+	color:white;
+	margin-bottom: 5px;
+
+	&.danger {
+		background-color: #ee5f5b;
+		box-shadow: 0px 2px 0px #BD362F;
+	}
+
+	&.success {
+		background-color:#62C462;
+		box-shadow: 0px 2px 0px #51A351;
+	}
+
+	&:hover{
+		text-decoration:none;
+	}
+}
+
+/*btn overrides*/
+
+.btn {
+	display: block;
+	padding: 5px 10px;
+	background-color: @linkColor;
+	border:none;
+	border-radius:3px;
+	box-shadow: 0px 2px 0px @linkColorHover;
+	color:white;
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
