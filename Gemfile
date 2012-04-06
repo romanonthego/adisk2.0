@@ -15,7 +15,8 @@ gem 'draper'
 gem 'russian'
 gem 'gretel', :path => "/home/roman/Rails/gems/gretel"
 # gem 'pjax-rails'
-gem 'rack-pjax'
+# gem 'rack-pjax'
+gem "spine-rails"
 gem "haml"
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 

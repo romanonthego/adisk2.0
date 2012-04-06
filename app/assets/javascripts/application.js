@@ -16,6 +16,7 @@
 //= require twitter/bootstrap
 //= require chosen.jquery
 //= require rails.validations
+//= require app
 //= require_tree .
 
 // clientSideValidations.callbacks.element.fail = function(element, message, callback) {
@@ -24,13 +25,13 @@
 // 	};
 
 $(document).ready(function(){
-	$('span.add-on').tooltip({placement : "left"});
-	$('.sortable').sortable({
-		update : function (event, ui){
-			console.log($(this).sortable('toArray'));
-		}
-	});
-	var result = $('.sortable').sortable('toArray');
-	console.log(result);
+	// $('span.add-on').tooltip({placement : "left"});
+	// $('.sortable').sortable({
+	// 	update : function (event, ui){
+	// 		console.log($(this).sortable('toArray'));
+	// 	}
+	// });
+	// var result = $('.sortable').sortable('toArray');
+	// console.log(result);
 });
 

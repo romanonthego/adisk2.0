@@ -20,6 +20,9 @@ module AdiskNew
     config.app_generators.stylesheet_engine :less
     config.assets.paths << "#{Rails.root}/app/assets/fonts"
 
+    # Loading concerns
+    # config.autoload_paths += "#{Rails.root}/app/concerns"
+
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
