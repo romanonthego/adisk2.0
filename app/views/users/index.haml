@@ -23,38 +23,10 @@
         %li
           %a{:href => "#"} Отклоненные
 
-- @users.each do |user|
-  %div.row.user
-    %div.span
-      %a(href="#{user_path(user)}")
-        %img(src="http://placehold.it/120x120" alt="")
-    %div.span3
-      %p
-        %strong Логин: 
-        %span dubinin
-      %p
-        %strong email: 
-        %span= user.email
-      %p
-        %strong Фамилия: 
-        %span Дубинин
-      %p
-        %strong Имя
-        %span Роман
-      %p
-        %strong Отчество 
-        %span Евгеньевич
-    %div.span3
-      %p
-        %strong Роли:
-        %span Пользователь, Администратор
-      %p
-        %strong Заместители:
-        %span Шуров Михаил Вадимович, Виквик
-    %div.span2.pull-right
-      %a.act{:href => "#{user_path(user)}"}
-        Подробнее
-        %i.icon-arrow-right.icon-large.pull-right
-      %a.act.danger{:href => "#{user_path(user)}"}
-        Заблокировать
-        %i.icon-lock.icon-large.pull-right
+= index_table_for @users do |table|
+  - table.add_column :name => :id, :header => "#", :method => :id
+  - table.add_column :name => :email, :header => "email", :method => :email
+
+  - table.add_control :type => :info, :icon => "arrow-right", :action => :show, :path => lambda {|obj| user_path(obj)}
+  - table.add_control :type => :info, :icon => "edit", :action => :edit, :path => lambda {|obj| edit_user_path(obj)}
+  - table.add_control :type => :danger, :icon => "lock", :action => :delete, :path => lambda {|obj| user_path(obj)}

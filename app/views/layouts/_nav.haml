@@ -1,5 +1,17 @@
 %ul(class="nav nav-list" id="nav-main")
-  %li= link_to "В работе", "#"
+  %li
+    %a(href="#{root_path}")
+      %span В работе
+      %br
+      %span.to-sign
+        %i.icon-edit>
+        5
+      %span.on-sign
+        %i.icon-share>
+        3
+      %span.overdues
+        %i.icon-time>
+        7
   %li= link_to "На подпись", "#"
 /%p(class="nav-header" data-toggle="collapse" data-target="#nav-documents") Документы
 %ul(class="nav nav-list" id="nav-documents")
@@ -24,4 +36,4 @@
   %li= link_to "БДР", "#"
 %ul(class="nav nav-list" id="nav-misc")
   %li(class="nav-header") Служебные
-  %li= link_to "Пользователи", "#"
+  %li= link_to "Пользователи", "#{users_path}"
