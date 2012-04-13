@@ -1,0 +1,12 @@
+%div{:class => "content-header clearfix"}
+  %div{:class => "row"}
+    %div{:class => "span10"}
+      %h3
+        = link_to responsibility_centres_path do
+          %i.icon-arrow-left.icon-large 
+        Центр Финансовой Отвественности
+
+%div.row
+  %div.span8
+    / = debug @user.user_roles
+    = render :partial => 'form', :locals => {:cfo => @cfo}

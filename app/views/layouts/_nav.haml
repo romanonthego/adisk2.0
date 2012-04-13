@@ -1,17 +1,6 @@
 %ul(class="nav nav-list" id="nav-main")
   %li
-    %a(href="#{root_path}")
-      %span В работе
-      %br
-      %span.to-sign
-        %i.icon-edit>
-        5
-      %span.on-sign
-        %i.icon-share>
-        3
-      %span.overdues
-        %i.icon-time>
-        7
+    %a(href="#{root_path}") В работе
   %li= link_to "На подпись", "#"
 /%p(class="nav-header" data-toggle="collapse" data-target="#nav-documents") Документы
 %ul(class="nav nav-list" id="nav-documents")
@@ -26,7 +15,7 @@
   %li= link_to "Контрагенты", "#"
   %li= link_to "Счета", "#"
   %li= link_to "Организации", "#"
-  %li= link_to "Подрзаделения", "#"
+  %li= link_to "ЦФО", responsibility_centres_path
   %li= link_to "Статить доходов", "#"
   %li= link_to "Статить расходов", "#"
 %ul(class="nav nav-list" id="nav-reports")

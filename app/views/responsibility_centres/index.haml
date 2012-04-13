@@ -1,0 +1,23 @@
+= page_header do |header|
+
+  - header.headline = "Центры Финансовой Ответвенности"
+
+  - header.add_action "Создать", new_responsibility_centre_path,:type => "success", :icon => "star-empty"
+
+
+  - header.add_crumb "Все", "all", :icon => "user"
+  - header.add_crumb "Активные", "active", :icon => "user"
+  - header.add_crumb "Заблокированные", "block", :icon => "user"
+
+
+= index_table_for @cfos do |table|
+  - table.add_column :name => :id, :header => "#", :method => :get_id
+  - table.add_column :name => :title, :header => "Название", :method => :title
+  - table.add_column :name => :description, :header => "Описание", :method => :description
+  - table.add_column :name => :head_name, :header => "Руководитель", :method => :get_head
+  - table.add_column :name => :comment, :header => "Комментарий", :method => :get_comment
+
+
+  - table.add_control :type => :info, :icon => "arrow-right", :action => :show, :path => lambda {|obj| responsibility_centre_path(obj)}
+  - table.add_control :type => :info, :icon => "edit", :action => :edit, :path => lambda {|obj| edit_responsibility_centre_path(obj)}
+  - table.add_control :type => :danger, :icon => "trash", :action => :delete, :path => lambda {|obj| responsibility_centre_path(obj)}

@@ -1,0 +1,112 @@
+
+.document-form {
+
+  fieldset{
+    padding-top:5px;  
+  }
+
+  .row:first-child {
+    box-shadow: 0px 1px 0px rgba(99, 99, 99, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.5);
+  }
+
+  legend {
+    display: block;
+    font-size: 1em;
+    line-height:2em;
+    margin-bottom:10px;
+    border: none;
+    box-shadow: 0px 1px 0px rgba(99, 99, 99, 0.3), 0px 2px 0px rgba(255, 255, 255, 0.5);
+  }
+
+  .actions {
+    margin-top:15px;
+  }
+
+  .input-custom {
+    display:inline-block;
+    position: relative;
+    margin-bottom:5px;
+
+    input, select, textarea {
+      padding-left:24px;
+      border-radius:0px;
+
+      &:focus {
+        box-shadow:none;
+        background-color: #F3F9FC;
+      }
+    }
+
+    textarea {
+      min-height:51px;
+      resize:none;
+    }
+
+    span.add-on {
+    position:absolute;
+    left:8px;
+    top:4px;
+    color:#999;
+    }
+
+    span.add-on-top {
+    position:absolute;
+    left:8px;
+    top:4px;
+    color:#999;
+    }
+
+    // error handling
+    &.error {
+      input, select {
+        border: 1px solid @errorText;
+        background-color: #FCF3F3;
+
+        /*&:focus {
+          background-color: @errorBackground;
+        }*/
+      }
+
+      span.add-on {
+        color: @errorText;
+      }
+    }
+  }
+
+  input.span12, textarea.span12, .uneditable-input.span12 {
+    width: 910px;
+  }
+  input.span11, textarea.span11, .uneditable-input.span11 {
+    width: 830px;
+  }
+  input.span10, textarea.span10, .uneditable-input.span10 {
+    width: 750px;
+  }
+  input.span9, textarea.span9, .uneditable-input.span9 {
+    width: 670px;
+  }
+  input.span8, textarea.span8, .uneditable-input.span8 {
+    width: 590px;
+  }
+  input.span7, textarea.span7, .uneditable-input.span7 {
+    width: 510px;
+  }
+  input.span6, textarea.span6, .uneditable-input.span6 {
+    width: 430px;
+  }
+  input.span5, textarea.span5, .uneditable-input.span5 {
+    width: 350px;
+  }
+  input.span4, textarea.span4, .uneditable-input.span4 {
+    width: 270px;
+  }
+  input.span3, textarea.span3, .uneditable-input.span3 {
+    width: 190px;
+  }
+  input.span2, textarea.span2, .uneditable-input.span2 {
+    width: 110px;
+  }
+  input.span1, textarea.span1, .uneditable-input.span1 {
+    width: 30px;
+  }
+}

@@ -9,7 +9,25 @@ class User < ActiveRecord::Base
         	:validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation #, :remember_me
+  attr_accessible :email, 
+                  :password, 
+                  :password_confirmation,
+                  :login, 
+                  :remember_me, 
+                  :first_name, 
+                  :patronomic, 
+                  :last_name,
+                  :position,
+                  :extension_number,
+                  :cell_phone,
+                  :icq,
+                  :skype,
+                  :city,
+                  :comment,
+                  :user_roles_attributes
+
+  # Simple roles plugin - user have ine or many roles within has_many_througth association
+  simple_roles
 
 
   # References
@@ -38,8 +56,9 @@ class User < ActiveRecord::Base
   has_many :active_reverse_deputies, :class_name => "Deputy", :foreign_key => "sub_id", :conditions => {:is_active => true}
   has_many :active_appointives, :class_name => "User", :through => :active_reverse_deputies, :foreign_key => "sub_id", :source => :appointive
 
-  # Simple roles plugin - user have ine or many roles within has_many_througth association
-  simple_roles
+
+  # Need to accept atributes througth nested form
+  accepts_nested_attributes_for :user_roles, :allow_destroy => true, :reject_if => lambda {|r| !r[:active]}
 
 
   # Validations
@@ -50,6 +69,10 @@ class User < ActiveRecord::Base
   # Instance methods
   def full_name
     last_name + " " + first_name + " " + patronomic
+  end
+
+  def initials
+    last_name + " " + first_name.first_letter + ". " + patronomic + "."
   end
 
   def activate_sub(user)

@@ -6,5 +6,5 @@ end
 # Since one link does not have specific controller and views - jst keep it here
 class ChainletLink < ActiveRecord::Base
 	belongs_to :chainlet
-	  validates :ordinal_number, :presence => true
+	validates :ordinal_number, :presence => true
 end

@@ -4,8 +4,35 @@
   %div.row
     = f.column do
       = f.fieldset "Основная информация" do
+        = f.prepended_for :last_name, :text, :placeholder => "Фамилия", :icon => "user"
+        = f.prepended_for :first_name, :text, :placeholder => "Имя", :icon => "user"
+        = f.prepended_for :patronomic, :text, :placeholder => "Отчество", :icon => "user"
+
+      = f.fieldset "Логин" do
         = f.prepended_for :email, :text, :placeholder => "email", :icon => "envelope", :hint => "hello"
-        = f.prepended_for :password, :password, :placeholder => "password", :icon => "user"
-        = f.prepended_for :password_confirmation, :password, :placeholder => "password confirmation", :icon => "user"
+        = f.prepended_for :password, :password, :placeholder => "Пароль", :icon => "key"
+        = f.prepended_for :password_confirmation, :password, :placeholder => "Подтверждение пароля", :icon => "key"
+        
+      = f.fieldset "Должность" do
+        = f.prepended_for :position, :text, :placeholder => "Должнолсть", :icon => "home"
+
+      = f.fieldset "Информация" do
+        = f.prepended_for :extension_number, :text, :placeholder => "Внутренний номер", :icon => "volume-down"
+        = f.prepended_for :cell_phone, :text, :placeholder => "Мобильный телефон", :icon => "volume-up"
+        = f.prepended_for :icq, :text, :placeholder => "ICQ", :icon => "align-left"
+        = f.prepended_for :skype, :text, :placeholder => "Skype", :icon => "comments"
+        = f.prepended_for :city, :text, :placeholder => "Город", :icon => "home"
+
+
+    = f.column do
+      = f.fieldset "Роли" do
+        = f.fields_for :user_roles do |r|
+          = r.hidden_field :role_id
+          %label.checkbox
+            = r.check_box :active
+            = r.object.role.name.capitalize
+
+      = f.fieldset "Комментарий" do
+        = f.prepended_for :comment, :textarea, :placeholder => "Комментарий", :icon => "pencil", :rows => 5
   %div.row
     = f.form_actions

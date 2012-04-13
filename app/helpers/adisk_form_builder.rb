@@ -87,15 +87,15 @@ class AdiskFormBuilder < ActionView::Helpers::FormBuilder
     add_on_class = display_label ? "add-on-label" : "add-on" # keep top positioning right with and without labels
 
     prepended = content_tag(:div, :class => "input-custom") do
-      case method
+      case type
       when :text
-        field = ready_text_field method, options
+        field = ready_text method, options
       when :password
-        field = ready_password_field method, options
+        field = ready_password method, options
       when :select
         field = ready_select method, options
       when :textarea
-        field = ready_select_field method, options
+        field = ready_textarea method, options
       else
         field = ready_text_field method, options
       end
@@ -113,18 +113,23 @@ class AdiskFormBuilder < ActionView::Helpers::FormBuilder
     end
   end
 
-  def ready_text_field method, options
+  def ready_text method, options
     text_field method, :placeholder => options[:placeholder], :class => "span#{options[:span]}"
   end
 
-  def ready_password_field method, options
+  def ready_password method, options
     password_field method, :placeholder => options[:placeholder], :class => "span#{options[:span]}"
   end
 
   def ready_select method, options
-    select @object.class.to_s.downcase, method, options[:collection], 
-                            {:include_blank => options[:placeholder] }, 
-                            {:class => "span#{options[:span]}", :data => {:validate => true}}
+    select_with_client_side_validations method, options[:collection], 
+                                        {:include_blank => options[:placeholder]}, 
+                                        {:class => "span#{options[:span]}"}
+    # select @object.class.to_s.underscore, method, options[:collection], 
+    #                         {:include_blank => options[:placeholder], :selected => options[:selected] }, 
+    #                         {:class => "span#{options[:span]}", :data => {:validate => true}}
+
+    # apply_client_side_validators (:head_id, {:validate => true})
   end
 
   def ready_textarea method, options

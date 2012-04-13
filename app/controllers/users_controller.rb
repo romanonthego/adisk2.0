@@ -28,6 +28,10 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
+    @roles = Role.all
+    @roles.each do |r|
+      @user.user_roles.build :role_id => r.id
+    end
 
     respond_to do |format|
       format.html # new.html.erb

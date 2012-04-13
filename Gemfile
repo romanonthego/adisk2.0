@@ -8,11 +8,11 @@ gem 'rails', '3.2.0'
 gem 'sqlite3'
 gem 'sqlite3'
 gem 'devise'
-gem 'simple_roles', :git => "git://github.com/stanislaw/simple_roles.git"
+gem 'simple_roles', :path => "lib/simple_roles"
 gem 'cancan'
 gem 'client_side_validations'
-gem 'draper'
-gem 'russian'
+# gem 'draper'
+# gem 'russian'
 gem 'gretel', :path => "/home/roman/Rails/gems/gretel"
 # gem 'pjax-rails'
 # gem 'rack-pjax'

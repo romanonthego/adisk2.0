@@ -116,7 +116,7 @@ module IndexTableHelper
 			content = ActiveSupport::SafeBuffer.new
 			@controls.each do |control|
 				content += link_to control[:path].call(obj), :class => "control control-#{control[:type]}" do
-					content_tag(:i, "", :class => "icon-#{control[:icon]}")
+					content_tag(:i, "", :class => "icon-#{control[:icon]} icon-large")
 				end
 			end
 			content_tag(:td, content)

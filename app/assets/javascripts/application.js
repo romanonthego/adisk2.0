@@ -25,13 +25,13 @@
 // 	};
 
 $(document).ready(function(){
-	// $('span.add-on').tooltip({placement : "left"});
-	// $('.sortable').sortable({
-	// 	update : function (event, ui){
-	// 		console.log($(this).sortable('toArray'));
-	// 	}
-	// });
-	// var result = $('.sortable').sortable('toArray');
-	// console.log(result);
+	$('span.add-on').tooltip({placement : "left"});
+	$('.sortable').sortable({
+		update : function (event, ui){
+			console.log($(this).sortable('toArray'));
+		}
+	});
+	var result = $('.sortable').sortable('toArray');
+	console.log(result);
 });
 

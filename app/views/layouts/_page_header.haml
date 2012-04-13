@@ -1,0 +1,18 @@
+%div{:class => "content-header clearfix"}
+  %div{:class => "row"}
+    %div{:class => "span10"}
+      %h3= header.headline
+      %div{:class => "pull-right"}
+        - header.actions.each do |act|
+          %a{:class => "span2 act #{act[:type]}", :href => "#{act[:path]}"}<
+            =act[:text]
+            %i{:class => "icon-#{act[:icon]} icon-large pull-right"}
+
+
+  %div{:class => "row"}
+    %div{:class => "span10"}
+      %ul{:class => "breadcrumb"}
+        - header.crumbs.each do |crumb|
+          %li
+            =link_to crumb[:text], {:show => crumb[:value]}
+            %span.divider /

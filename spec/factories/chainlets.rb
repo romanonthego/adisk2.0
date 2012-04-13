@@ -3,4 +3,6 @@
 FactoryGirl.define do
   factory :chainlet do
   end
+  factory :chainlet_link do
+  end
 end
