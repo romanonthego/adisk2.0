@@ -4,8 +4,28 @@
 		"selected_items":
 		[
 			[
+				"dis",
+				"display	display: block"
+			],
+			[
+				"dispa",
+				"display	display: common-types"
+			],
+			[
+				"req",
+				"require"
+			],
+			[
+				"d",
+				"display	display: inline"
+			],
+			[
+				"te",
+				"text	text-transform: capitalize/upper/lower"
+			],
+			[
 				"def",
-				"def: def … end"
+				"def	def … end"
 			],
 			[
 				"con",
@@ -26,10 +46,6 @@
 			[
 				"inde",
 				"index_table_header"
-			],
-			[
-				"dis",
-				"display: display: block"
 			],
 			[
 				"lis",
@@ -344,10 +360,6 @@
 				"jit: javascript_include_tag"
 			],
 			[
-				"req",
-				"requier_auth"
-			],
-			[
 				"fn",
 				"fnFilter"
 			],
@@ -471,12 +483,48 @@
 		"selected_items":
 		[
 			[
+				"pakc",
+				"Package Control: Install Package"
+			],
+			[
+				"packe",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Git: Add..."
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"",
+				"Git: Diff All"
+			],
+			[
+				"pacl",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"test",
+				"Set Syntax: TestConsole"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
 				"pac",
 				"Package Control: Discover Packages"
 			],
 			[
-				"pack",
-				"Package Control: Install Package"
+				"todo",
+				"Todo: List All"
 			],
 			[
 				"pa",
@@ -485,14 +533,6 @@
 			[
 				"ruby",
 				"Set Syntax: Ruby"
-			],
-			[
-				"git",
-				"Git: Diff All"
-			],
-			[
-				"todo",
-				"Todo: List All"
 			],
 			[
 				"to",
@@ -515,10 +555,6 @@
 				"Git: Status"
 			],
 			[
-				"pakc",
-				"Package Control: Install Package"
-			],
-			[
 				"show",
 				"Show TODOs in project and open files"
 			],
@@ -535,11 +571,11 @@
 				"Set Syntax: Ruby"
 			]
 		],
-		"width": 435.0
+		"width": 606.0
 	},
 	"console":
 	{
-		"height": 129.0
+		"height": 256.0
 	},
 	"distraction_free":
 	{
@@ -552,44 +588,62 @@
 	},
 	"file_history":
 	[
-		"/home/roman/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/roman/Rails/Adisk-new/app/views/chainlets/new.haml",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/app/sortable.css.less",
+		"/home/roman/Rails/Adisk-new/app/helpers/adisk_form_builder.rb",
+		"/home/roman/Rails/Adisk-new/app/assets/javascripts/application.js",
+		"/home/roman/Rails/Adisk-new/Gemfile",
+		"/home/roman/Rails/Adisk-new/app/views/layouts/_page_header.haml",
+		"/home/roman/Rails/Adisk-new/app/views/chainlets/index.haml",
+		"/home/roman/Rails/Adisk-new/app/views/layouts/_nav.haml",
+		"/home/roman/Rails/Adisk-new/app/models/chainlet.rb",
+		"/home/roman/Rails/Adisk-new/app/helpers/index_table_helper.rb",
+		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/index.haml",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/app/document-form.css.less",
+		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/edit.haml",
+		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/_form.haml",
+		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/show.haml",
+		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/new.haml",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/app/layout.css.less",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/app/content.css.less",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/app/buttons-and-actions.css.less",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/bootstrap.css.less",
+		"/home/roman/.config/sublime-text-2/Packages/BeautifyRuby/BeautifyRuby.sublime-settings",
+		"/home/roman/Rails/Adisk-new/app/controllers/chainlets_controller.rb",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/overrides.css.less",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/application.css",
+		"/home/roman/Rails/Adisk-new/app/models/responsibility_centre.rb",
+		"/home/roman/Rails/Adisk-new/app/assets/javascripts/users.js.coffee",
+		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/font-awesome.css.less",
+		"/home/roman/Rails/Adisk-new/vendor/assets/stylesheets/font-awesome.css.less",
+		"/home/roman/Rails/Adisk-new/app/views/dashboard/test_index.haml",
 		"/home/roman/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/roman/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
-		"/home/roman/Rails/Adisk-new/app/models/responsibility_centre.rb",
+		"/home/roman/Rails/Adisk-new/spec/helpers/department_helper_spec.rb",
+		"/home/roman/Rails/Adisk-new/spec/factories/chainlets.rb",
+		"/home/roman/Rails/Adisk-new/spec/factories/chainlet_links.rb",
+		"/home/roman/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/roman/.config/sublime-text-2/Packages/Default/Global.sublime-settings",
 		"/home/roman/.config/sublime-text-2/Packages/User/Global.sublime-settings",
-		"/home/roman/Rails/Adisk-new/app/views/layouts/_nav.haml",
-		"/home/roman/Rails/Adisk-new/app/views/dashboard/test_index.haml",
 		"/home/roman/Rails/Adisk-new/app/helpers/page_structure_helper.rb",
-		"/home/roman/Rails/Adisk-new/app/views/layouts/_page_header.haml",
 		"/home/roman/.config/sublime-text-2/Packages/Default/Base File.sublime-settings",
 		"/home/roman/Rails/Adisk-new/app/views/dashboard/text_index.haml",
 		"/home/roman/Rails/Adisk-new/app/helpers/page_structure.rb",
-		"/home/roman/Rails/Adisk-new/app/helpers/index_table_helper.rb",
-		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/new.haml",
-		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/index.haml",
 		"/home/roman/Rails/Adisk-new/app/views/dashboard/test_index_old.haml",
-		"/home/roman/Rails/Adisk-new/app/helpers/adisk_form_builder.rb",
-		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/overrides.css.less",
 		"/home/roman/Rails/Adisk-new/app/assets/javascripts/rails.validations.adiskFormBuilder.js",
-		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/_form.haml",
-		"/home/roman/Rails/Adisk-new/app/views/responsibility_centres/edit.haml",
 		"/home/roman/Rails/Adisk/app/views/departments/_form.html.erb",
-		"/home/roman/Rails/Adisk-new/app/assets/javascripts/application.js",
 		"/home/roman/Rails/Adisk-new/app/controllers/responsibility_centres_controller.rb",
 		"/home/roman/Rails/Adisk-new/config/routes.rb",
 		"/home/roman/Rails/Adisk-new/db/migrate/20120412064818_create_responsibility_centres.rb",
 		"/home/roman/Rails/Adisk-new/app/views/users/edit.haml",
 		"/home/roman/Rails/Adisk-new/lib/simple_roles/app/models/user_role.rb",
 		"/home/roman/Rails/Adisk-new/lib/simple_roles/lib/simple_roles.rb",
-		"/home/roman/Rails/Adisk-new/Gemfile",
 		"/home/roman/Rails/Adisk-new/app/models/user.rb",
 		"/home/roman/Rails/Adisk-new/app/models/roles.rb",
 		"/home/roman/Rails/Adisk-new/app/views/users/_form.haml",
 		"/home/roman/Rails/Adisk-new/app/views/users/new.haml",
 		"/home/roman/Rails/Adisk-new/app/controllers/users_controller.rb",
 		"/home/roman/Rails/Adisk-new/app/concerns/user_roles.rb",
-		"/home/roman/Rails/Adisk-new/app/models/chainlet.rb",
 		"/home/roman/Rails/Remolino/app/views/users/new.slim",
 		"/home/roman/Rails/Adisk-new/spec/factories/users.rb",
 		"/home/roman/Rails/Adisk-new/app/views/users/index.haml",
@@ -619,20 +673,15 @@
 		"/home/roman/Rails/Grab-all-the-Posters!/app/views/layouts/application.html.erb",
 		"/home/roman/Rails/Adisk-new/app/assets/javascripts/app/models/user.js.coffee",
 		"/home/roman/Rails/Adisk/app/views/activities/index.html.erb",
-		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/bootstrap.css.less",
-		"/home/roman/Rails/Adisk-new/app/views/chainlets/new.haml",
 		"/home/roman/Rails/Adisk/app/views/payment_requests/_form.html.erb",
-		"/home/roman/Rails/Adisk-new/app/controllers/chainlets_controller.rb",
 		"/home/roman/Rails/Adisk-new/db/migrate/20120403104830_create_chainlet_links.rb",
 		"/home/roman/Rails/Adisk-new/README.rdoc",
-		"/home/roman/Rails/Adisk-new/app/views/chainlets/index.haml",
 		"/home/roman/Rails/Adisk-new/db/migrate/20120403093551_create_chainlets.rb",
 		"/home/roman/Rails/Adisk-new/db/migrate/20120331104048_devise_create_users.rb",
 		"/home/roman/Rails/Adisk-new/app/models/chainlet_link.rb",
 		"/home/roman/Rails/Adisk-new/config/initializers/client_side_validations.rb",
 		"/home/roman/Rails/Remolino/app/assets/javascripts/rails.validations.adiskFormBuilder.js",
 		"/home/roman/Rails/Adisk-new/app/views/dashboard/test_form.haml",
-		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/application.css",
 		"/home/roman/Rails/Adisk-new/app/assets/stylesheets/bootstrap_and_overrides.css.less",
 		"/home/roman/Rails/Remolino/Gemfile",
 		"/home/roman/.config/sublime-text-2/Packages/Todo Manager/README.md",
@@ -666,20 +715,7 @@
 		"/home/roman/Rails/Remolino/app/controllers/dashboard_controller.rb",
 		"/home/roman/Rails/Remolino/app/views/shared/_alerts.slim",
 		"/home/roman/Rails/Remolino/app/assets/stylesheets/remolino/alerts.less",
-		"/home/roman/Rails/Remolino/app/assets/stylesheets/remolino/variables.less",
-		"/home/roman/Rails/Remolino/app/views/shared/_header.slim",
-		"/home/roman/Rails/Remolino/app/assets/stylesheets/font-awesome.less",
-		"/home/roman/Rails/Remolino/app/assets/stylesheets/application.css.less",
-		"/home/roman/Rails/Remolino/app/views/devise/sessions/new.slim",
-		"/home/roman/Rails/Remolino/app/views/dashboard/test_page.haml",
-		"/home/roman/Rails/Remolino/app/views/layouts/application.slim",
-		"/home/roman/Rails/Remolino/vendor/assets/javascripts/jquery.pjax.js",
-		"/home/roman/Rails/Remolino/app/assets/javascripts/application.js",
-		"/home/roman/Rails/BackUp/Remolino/app/controllers/meta_controllers/application_controller.rb",
-		"/home/roman/Rails/gems/gretel/lib/gretel/crumbs.rb",
-		"/home/roman/Rails/BackUp/12.01/Adisk/app/models/payment_request.rb",
-		"/home/roman/Rails/BackUp/12.01/Adisk/app/views/payment_requests/_form.html.erb",
-		"/home/roman/Rails/BackUp/12.01/Adisk/app/views/payment_requests/xls_export.html.erb"
+		"/home/roman/Rails/Remolino/app/assets/stylesheets/remolino/variables.less"
 	],
 	"find":
 	{
@@ -697,6 +733,8 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"side",
+			"open f",
 			"page_header",
 			"select",
 			"@responsibility_centre",
@@ -864,6 +902,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.tests":
+	{
+		"height": 222.0
+	},
 	"replace":
 	{
 		"height": 62.0
@@ -894,13 +936,21 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/home/roman/code/encuesta/encuesta.sublime-project"
+			],
+			[
+				"new",
+				"/home/roman/Rails/Adisk-new/adisk2.0.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
 	"show_minimap": true,
-	"show_open_files": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 283.0,
+	"side_bar_width": 291.0,
 	"status_bar_visible": true
 }

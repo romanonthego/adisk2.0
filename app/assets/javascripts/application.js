@@ -16,7 +16,6 @@
 //= require twitter/bootstrap
 //= require chosen.jquery
 //= require rails.validations
-//= require app
 //= require_tree .
 
 // clientSideValidations.callbacks.element.fail = function(element, message, callback) {

@@ -11,9 +11,10 @@ gem 'devise'
 gem 'simple_roles', :path => "lib/simple_roles"
 gem 'cancan'
 gem 'client_side_validations'
+gem "nested_form"
 # gem 'draper'
 # gem 'russian'
-gem 'gretel', :path => "/home/roman/Rails/gems/gretel"
+# gem 'gretel', :path => "/home/roman/Rails/gems/gretel"
 # gem 'pjax-rails'
 # gem 'rack-pjax'
 gem "spine-rails"

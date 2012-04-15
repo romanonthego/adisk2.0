@@ -1,7 +1,8 @@
-%div{:class => "content-header clearfix"}
-  %div{:class => "row"}
-    %div{:class => "span10"}
-      %h3 Процесс
+= page_header do |header|
+
+  - header.headline = "Бизнес-процессы"
+  - header.back_path = chainlets_path
+
 
 =form_for @chainlet, :validate => true, :builder => AdiskFormBuilder, :html => {:class => "document-form form-horizontal"} do |f|
   %div.row
@@ -15,20 +16,28 @@
 
   =f.sortable_list_for_nested :chainlet_links, :id => "chainlet-links" do |b|
     =b.sortable_list_element 8 do
-      %div.meta
-        %i.icon-move.icon-large.handler
-        %p #1
-      %div.btn-group(data-toggle="buttons-radio" style="display:inline-block")
-        %div.btn 
-          %i.icon-user
-          Пользователь
-        %div.btn
-          %i.icon-cog
-          Роль
-        %div.btn
-          %i.icon-home
-          Отдел
+    
+      %label.radio.inline
+        %input{:type => "radio"}
+        %span пользователь
+      %label.radio.inline
+        %input{:type => "radio"}
+        %span роль
+      %label.radio.inline
+        %input{:type => "radio"}
+        %span цфо
+      / %div.btn-group(data-toggle="buttons-radio" style="display:inline-block")
+      /   %div.btn 
+      /     %i.icon-user
+      /     Пользователь
+      /   %div.btn
+      /     %i.icon-cog
+      /     Роль
+      /   %div.btn
+      /     %i.icon-home
+      /     Отдел
       %div.pull-right
-        =b.prepended_for :link_value,  :text, :icon => "info-sign", :span => 4
+        =b.prepended_for :link_value,  :text, :icon => "info-sign", :span => 3
+        =b.prepended_for :timeout, :text, :icon => "time", :span => 2
   %div.row
     = f.form_actions

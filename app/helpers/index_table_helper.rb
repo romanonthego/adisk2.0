@@ -6,9 +6,12 @@ module IndexTableHelper
 	def index_table_for object, &block #objects, columns
 		table = IndexTable.new object
 		# gather all the column and controls
-		yield table
-
-		table.construct
+		unless object.empty?
+			yield table
+			table.construct
+		else
+			"No records"
+		end
 	end
 
 	def generate_path path
@@ -130,7 +133,7 @@ module IndexTableHelper
 					if obj.respond_to? c[:method]
 						obj.send(c[:method])
 					else
-						raise NoMethodError.new "Can't get that data inside the index table. Check the method your calling."
+						raise NoMethodError.new "Can't get that data inside the index table. Check the #{c[:method]} you're calling."
 					end
 				end
 			end

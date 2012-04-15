@@ -6,6 +6,9 @@ class AdiskFormBuilder < ActionView::Helpers::FormBuilder
   include ActionView::Helpers::AssetTagHelper
   include ActionView::Context #nested content tags works now
 
+  # Rayn Bytes nested form
+  # include NestedForm::BuilderMixin
+
   # Form helper, returns form column, actualy span4 div
   # TODO: emplement class handler
 

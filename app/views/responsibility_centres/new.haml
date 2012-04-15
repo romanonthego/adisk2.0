@@ -1,11 +1,8 @@
-%div{:class => "content-header clearfix"}
-  %div{:class => "row"}
-    %div{:class => "span10"}
-      %h3
-        = link_to responsibility_centres_path do
-          %i.icon-arrow-left.icon-large 
-        Центр Финансовой Отвественности
+= page_header do |header|
 
+  - header.headline = "Центры Финансовой Ответвенности"
+  - header.back_path = responsibility_centres_path
+  
 %div.row
   %div.span8
     / = debug @user.user_roles

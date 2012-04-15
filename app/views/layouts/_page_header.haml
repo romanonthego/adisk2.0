@@ -1,18 +1,23 @@
-%div{:class => "content-header clearfix"}
+%div{:class => "content-header"}
   %div{:class => "row"}
     %div{:class => "span10"}
-      %h3= header.headline
-      %div{:class => "pull-right"}
-        - header.actions.each do |act|
-          %a{:class => "span2 act #{act[:type]}", :href => "#{act[:path]}"}<
-            =act[:text]
-            %i{:class => "icon-#{act[:icon]} icon-large pull-right"}
+      %h3
+        - if header.back_path.present?
+          = link_to header.back_path do
+            %i.icon-backward
+        = header.headline
+      - if header.actions.any?
+        %div{:class => "page-actions"}
+          - header.actions.each do |act|
+            %a{:class => "#{act[:type]}", :href => "#{act[:path]}"}
+              =act[:text]
+              %i{:class => "icon-#{act[:icon]} icon-large"}
 
-
-  %div{:class => "row"}
-    %div{:class => "span10"}
-      %ul{:class => "breadcrumb"}
-        - header.crumbs.each do |crumb|
-          %li
-            =link_to crumb[:text], {:show => crumb[:value]}
-            %span.divider /
+  - if header.crumbs.any?
+    %div{:class => "row"}
+      %div{:class => "span10"}
+        %ul{:class => "breadcrumb"}
+          - header.crumbs.each do |crumb|
+            %li
+              =link_to crumb[:text], {:show => crumb[:value]}
+              %span.divider /

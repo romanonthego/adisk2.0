@@ -1,16 +1,18 @@
-= form_for cfo, :validate => true, :builder => AdiskFormBuilder, :html => {:class => "document-form form-horizontal"} do |f|
+%div.row
+  %div.span8
+    = form_for cfo, :validate => true, :builder => AdiskFormBuilder, :html => {:class => "document-form form-horizontal"} do |f|
 
-  %div.row
-    = f.column do
-      = f.fieldset "Основная информация" do
-        = f.prepended_for :title, :text, :placeholder => "Название", :icon => "font"
-        = f.prepended_for :description, :text, :placeholder => "Описание", :icon => "bold"
-      = f.fieldset "Основная информация" do
-        = f.prepended_for :head_id, :select, :placeholder => "Руководитель", :icon => "user", :collection => User.all.map {|u| [u.email, u.id]}
+      %div.row
+        = f.column do
+          = f.fieldset "Основная информация" do
+            = f.prepended_for :title, :text, :placeholder => "Название", :icon => "font"
+            = f.prepended_for :description, :text, :placeholder => "Описание", :icon => "bold"
+          = f.fieldset "Основная информация" do
+            = f.prepended_for :head_id, :select, :placeholder => "Руководитель", :icon => "user", :collection => User.all.map {|u| [u.email, u.id]}
 
 
-    = f.column do
-      = f.fieldset "Комментарий" do
-        = f.prepended_for :comment, :textarea, :placeholder => "Комментарий", :icon => "pencil", :rows => 5
-  %div.row
-    = f.form_actions
+        = f.column do
+          = f.fieldset "Комментарий" do
+            = f.prepended_for :comment, :textarea, :placeholder => "Комментарий", :icon => "pencil", :rows => 3
+      %div.row
+        = f.form_actions

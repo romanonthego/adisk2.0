@@ -1,9 +1,6 @@
-%div{:class => "content-header clearfix"}
-  %div{:class => "row"}
-    %div{:class => "span10"}
-      %h3 Центр Финансовой Отвественности
+= page_header do |header|
 
-%div.row
-  %div.span8
-    / = debug @user.user_roles
-    = render :partial => 'form', :locals => {:cfo => @cfo}
+  - header.headline = "Центры Финансовой Ответвенности"
+  - header.back_path = responsibility_centres_path
+  
+= render :partial => 'form', :locals => {:cfo => @cfo}

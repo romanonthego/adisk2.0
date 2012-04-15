@@ -1,8 +1,21 @@
-%div{:class => "content-header clearfix"}
-  %div{:class => "row"}
-    %div{:class => "span10"}
-      %h3 Процессы
-      %div{:class => "span2 pull-right"}
-        %a.act.success{:href => "#{new_chainlet_path}"}
-          Создать
-          %i.icon-star-empty.icon-large.pull-right
+= page_header do |header|
+
+  - header.headline = "Бизнес-процессы"
+
+  - header.add_action "Создать", new_chainlet_path,:type => "success", :icon => "star-empty"
+
+  - header.add_crumb "Все", "all", :icon => "user"
+  - header.add_crumb "Активные", "active", :icon => "user"
+  - header.add_crumb "Заблокированные", "block", :icon => "user"
+
+
+= index_table_for @chainlets do |table| 
+  - table.add_column :name => :id, :header => "#", :method => :get_id
+  - table.add_column :name => :title, :header => "Название", :method => :title
+  - table.add_column :name => :description, :header => "Описание", :method => :description
+  - table.add_column :name => :comment, :header => "Комментарий", :method => :get_comment
+
+
+  - table.add_control :type => :info, :icon => "arrow-right", :action => :show, :path => lambda {|obj| chainlet_path(obj)}
+  - table.add_control :type => :info, :icon => "edit", :action => :edit, :path => lambda {|obj| edit_chainlet_path(obj)}
+  - table.add_control :type => :danger, :icon => "trash", :action => :delete, :path => lambda {|obj| chainlet_path(obj)}
